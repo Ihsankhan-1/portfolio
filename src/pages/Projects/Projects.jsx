@@ -20,7 +20,7 @@ const Projects = () => {
               <div className="card rounded">
                 <div className="card-image">
                   <span className="card-notify-badge">Full Stack</span>
-                  <img src="khan.jpg" alt="projects" />
+                  <img src="ik1.jpg" alt="projects" />
                 </div>
 
                 <div className="card-image-overlay m-3">
@@ -68,7 +68,7 @@ const Projects = () => {
               <div className="card rounded">
                 <div className="card-image">
                   <span className="card-notify-badge">Design</span>
-                  <img src="khan.jpg" alt="projects" />
+                  <img src="ik2.jpg" alt="projects" />
                 </div>
 
                 <div className="card-image-overlay m-3">
