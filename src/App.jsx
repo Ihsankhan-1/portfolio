@@ -8,7 +8,7 @@ import Contact from "./pages/Contact/Contact";
 import "./App.css";
 import ScrollToTop from "react-scroll-to-top";
 import { useTheme } from "./components/context/ThemeContext";
-import Tada from "react-reveal/Tada";
+import { motion } from "framer-motion"; // ✅ framer-motion import
 import MobileNav from "./components/MobileNav/MobileNav";
 
 function App() {
@@ -29,9 +29,14 @@ function App() {
         </div>
 
         <div className="footer mb-3 ms-3">
-          <Tada>
-            <h4 className="text-center">Made With 😍 Ihsankhan &copy; 2024</h4>
-          </Tada>
+          <motion.h4
+            className="text-center"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          >
+            Made With 😍 Ihsankhan &copy; 2024
+          </motion.h4>
         </div>
       </div>
       <ScrollToTop

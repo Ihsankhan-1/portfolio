@@ -4,14 +4,15 @@ import "./home.css";
 import Typewriter from "typewriter-effect";
 import Resume from "../../assets/docs/Resume.pdf";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [theme, setTheme] = useTheme();
-  //handle theme
+  // Handle theme toggle
   const handleTheme = () => {
     setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
   };
+
   return (
     <>
       <div>
@@ -24,41 +25,54 @@ const Home = () => {
             )}
           </div>
           <div className="container home-content">
-            <Fade right>
-              <h2>Hi 👋 I'm a </h2>
-              <h1>
-                <Typewriter
-                  options={{
-                    strings: [
-                      "FullStack Developer!",
-                      "Mern Stack Developer!",
-                      "React Native Developer!",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </h1>
-            </Fade>
-            <Fade bottom>
-              <div className="home-buttons">
-                <a
-                  className="btn btn-hire"
-                  href="https://api.whatsapp.com/send?phone=03089093675"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Hire Me
-                </a>
-                <a
-                  className="btn btn-resume"
-                  href={Resume}
-                  download="Resume.pdf"
-                >
-                  My Resume
-                </a>
-              </div>
-            </Fade>
+            {/* Replacing Fade with framer-motion */}
+            <motion.h2
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              Hi 👋 I'm a{" "}
+            </motion.h2>
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <Typewriter
+                options={{
+                  strings: [
+                    "FullStack Developer!",
+                    "Mern Stack Developer!",
+                    "React Native Developer!",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </motion.h1>
+
+            <motion.div
+              className="home-buttons"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+            >
+              <a
+                className="btn btn-hire"
+                href="https://api.whatsapp.com/send?phone=03089093675"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Hire Me
+              </a>
+              <a
+                className="btn btn-resume"
+                href={Resume}
+                download="Resume.pdf"
+              >
+                My Resume
+              </a>
+            </motion.div>
           </div>
         </div>
       </div>
