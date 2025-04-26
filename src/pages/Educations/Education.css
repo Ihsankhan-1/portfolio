@@ -1,0 +1,82 @@
+/* .education {
+	padding: 100px 0px;
+	padding-left: 150px;
+	margin-left: 120px;
+	background-color: rgba(128, 128, 128, 0.101);
+
+}
+
+.education hr {
+	color: #138781;
+	width: 400px;
+	margin: 10px auto;
+}
+
+.education h2 {
+	font-weight: bold;
+	color: #138781;
+} */
+
+.education {
+	padding: 100px 0px;
+	margin: 50px 0px;
+	margin-left: 120px;
+	background-color: rgba(128, 128, 128, 0.101);
+}
+
+.education hr {
+	color: #138781;
+	width: 400px;
+	margin: 10px auto;
+}
+
+.education h2 {
+	font-weight: bold;
+	color: #138781;
+}
+
+.education .vertical-timeline-element-title {
+	color: #138781;
+}
+
+.education .vertical-timeline-element-subtitle {
+	color: #1e1e2c;
+}
+
+/* ========= DARK MODE ============ */
+
+#dark .education {
+	border: 1px solid ;
+	background: linear-gradient(90deg, (rgb(16,14,46)0))
+	background-color: rgb(16, 14, 46);
+}
+
+#dark .education  {
+	border: 1px solid rgba(229, 231, 235, 0.6); /* border-gray-200 with 60% opacity */
+	border-radius: 1rem; /* rounded-2xl */
+	overflow: hidden;
+	transition: box-shadow 300ms ease-in-out;
+  }
+  
+  /* Hover styles */
+  #dark .education:hover {
+	box-shadow: 0 25px 50px -12px rgba(243, 244, 246, 1); /* hover:shadow-2xl with gray-100 color */
+  }
+
+/* ========================== */
+@media (max-width: 600px) {
+	.education {
+		margin: 0;
+		padding: 0;
+		margin-top: 30px;
+	}
+
+	.education h2 {
+		padding-top: 20px;
+	}
+
+	.education hr {
+		width: 280px;
+		margin-bottom: 10px;
+	}
+}
